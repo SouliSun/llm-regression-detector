@@ -8,7 +8,7 @@ from src.llm_client import OpenAIClient
 from src.prompt_loader import load_prompt
 
 config = load_prompt("v1")
-config.model = "openai/gpt-oss-20b"
+config.model = "openai/gpt-oss-120b"
 
 classifier = Classifier(client = OpenAIClient(), config = config)
 

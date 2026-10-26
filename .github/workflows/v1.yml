@@ -1,0 +1,67 @@
+name: Prompt Regression Detection
+
+on:
+  pull_request:
+    paths:
+      - 'prompts/**'
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  eval-gate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: Install Dependencies
+        run: |
+          pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run Unit Tests
+        run: pytest
+
+      - name: Run Evaluation
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+        run: |
+          python -m evals.run --prompt v2 --out results/candidate.json
+
+      - name: Compare Against Baseline
+        id: compare
+        continue-on-error: true
+        run: |
+          python -m evals.compare --baseline results/v1_baseline.json --candidate results/candidate.json > report.txt
+          echo "exit_code=$?" >> $GITHUB_OUTPUT
+          cat report.txt
+
+      - name: Post PR Comment
+        if: always() && steps.compare.outcome != 'skipped'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const report = fs.existsSync('report.txt') ? fs.readFileSync('report.txt', 'utf8') : 'No report generated.';
+            const status = '${{ steps.compare.outputs.exit_code }}' === '0' ? '✅ PASSED' : '❌ FAILED';
+            const body = `### Prompt Regression Check: ${status}\n\n\`\`\`text\n${report}\n\`\`\``;
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: body
+            });
+            
+      - name: Check Gate Status
+        if: steps.compare.outputs.exit_code != '0'
+        run: |
+          echo "Critical regressions detected! Blocking merge."
+          exit 1

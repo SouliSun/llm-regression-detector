@@ -1,0 +1,1614 @@
+{
+  "metadata": {
+    "prompt_version": "v2",
+    "prompt_sha256": "9924a96270bdd05c1c0d9db8528464c3ef2444be7922a3e239be6d5b189e5cba",
+    "model": "openai/gpt-oss-120b",
+    "temperature": 0.0,
+    "timestamp": "2026-10-26T19:44:35.629096+00:00",
+    "dataset_path": "data\\dataset.jsonl",
+    "dataset_sha256": "b6be33dd54d9c224d20c3cc3d2d5eae9238fd0038e64a2be09214f425ae1fb4b"
+  },
+  "metrics": {
+    "strict_accuracy": {
+      "accuracy": 0.9893617021276596,
+      "correct": 93,
+      "total": 94
+    },
+    "ambiguous_accuracy": {
+      "accuracy": 0.9615384615384616,
+      "correct": 25,
+      "total": 26
+    },
+    "invalid_rate": {
+      "rate": 0.0,
+      "invalid": 0,
+      "total": 120
+    },
+    "by_category": {
+      "billing": {
+        "accuracy": 1.0,
+        "correct": 21,
+        "total": 21
+      },
+      "technical": {
+        "accuracy": 1.0,
+        "correct": 23,
+        "total": 23
+      },
+      "account": {
+        "accuracy": 1.0,
+        "correct": 24,
+        "total": 24
+      },
+      "general": {
+        "accuracy": 0.9615384615384616,
+        "correct": 25,
+        "total": 26
+      }
+    },
+    "by_tag": {
+      "clear": {
+        "accuracy": 0.9861111111111112,
+        "correct": 71,
+        "total": 72
+      },
+      "short": {
+        "accuracy": 1.0,
+        "correct": 6,
+        "total": 6
+      },
+      "angry": {
+        "accuracy": 1.0,
+        "correct": 3,
+        "total": 3
+      },
+      "messy": {
+        "accuracy": 1.0,
+        "correct": 10,
+        "total": 10
+      },
+      "typos": {
+        "accuracy": 1.0,
+        "correct": 4,
+        "total": 4
+      },
+      "non_english": {
+        "accuracy": 1.0,
+        "correct": 7,
+        "total": 7
+      },
+      "vague": {
+        "accuracy": 1.0,
+        "correct": 3,
+        "total": 3
+      },
+      "off_topic": {
+        "accuracy": 1.0,
+        "correct": 4,
+        "total": 4
+      }
+    },
+    "confusion_matrix": {
+      "billing": {
+        "billing": 29,
+        "technical": 0,
+        "account": 1,
+        "general": 0,
+        "invalid": 0
+      },
+      "technical": {
+        "billing": 0,
+        "technical": 30,
+        "account": 0,
+        "general": 0,
+        "invalid": 0
+      },
+      "account": {
+        "billing": 0,
+        "technical": 0,
+        "account": 30,
+        "general": 0,
+        "invalid": 0
+      },
+      "general": {
+        "billing": 3,
+        "technical": 0,
+        "account": 0,
+        "general": 27,
+        "invalid": 0
+      }
+    }
+  },
+  "results": [
+    {
+      "id": "TC-01",
+      "expected_category": "billing",
+      "tags": [
+        "clear"
+      ],
+      "predicted_category": "billing",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 477.56460000164225,
+      "error": null
+    },
+    {
+      "id": "TC-02",
+      "expected_category": "billing",
+      "tags": [
+        "clear"
+      ],
+      "predicted_category": "billing",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 408.5893000010401,
+      "error": null
+    },
+    {
+      "id": "TC-03",
+      "expected_category": "billing",
+      "tags": [
+        "clear"
+      ],
+      "predicted_category": "billing",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 691.453299998102,
+      "error": null
+    },
+    {
+      "id": "TC-04",
+      "expected_category": "billing",
+      "tags": [
+        "clear"
+      ],
+      "predicted_category": "billing",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 514.9257999983092,
+      "error": null
+    },
+    {
+      "id": "TC-05",
+      "expected_category": "technical",
+      "tags": [
+        "clear"
+      ],
+      "predicted_category": "technical",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 323.8181999986409,
+      "error": null
+    },
+    {
+      "id": "TC-06",
+      "expected_category": "technical",
+      "tags": [
+        "clear"
+      ],
+      "predicted_category": "technical",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 309.183800000028,
+      "error": null
+    },
+    {
+      "id": "TC-07",
+      "expected_category": "technical",
+      "tags": [
+        "clear"
+      ],
+      "predicted_category": "technical",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 305.9266000018397,
+      "error": null
+    },
+    {
+      "id": "TC-08",
+      "expected_category": "technical",
+      "tags": [
+        "clear"
+      ],
+      "predicted_category": "technical",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 549.3272999992769,
+      "error": null
+    },
+    {
+      "id": "TC-09",
+      "expected_category": "account",
+      "tags": [
+        "clear"
+      ],
+      "predicted_category": "account",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 805.4735999976401,
+      "error": null
+    },
+    {
+      "id": "TC-10",
+      "expected_category": "account",
+      "tags": [
+        "clear"
+      ],
+      "predicted_category": "account",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 328.8439999996626,
+      "error": null
+    },
+    {
+      "id": "TC-11",
+      "expected_category": "account",
+      "tags": [
+        "clear"
+      ],
+      "predicted_category": "account",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 275.496899997961,
+      "error": null
+    },
+    {
+      "id": "TC-12",
+      "expected_category": "account",
+      "tags": [
+        "clear"
+      ],
+      "predicted_category": "account",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 232.88660000253003,
+      "error": null
+    },
+    {
+      "id": "TC-13",
+      "expected_category": "general",
+      "tags": [
+        "clear"
+      ],
+      "predicted_category": "billing",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 645.6466999989061,
+      "error": null
+    },
+    {
+      "id": "TC-14",
+      "expected_category": "general",
+      "tags": [
+        "clear"
+      ],
+      "predicted_category": "general",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 314.6532000027946,
+      "error": null
+    },
+    {
+      "id": "TC-15",
+      "expected_category": "general",
+      "tags": [
+        "clear"
+      ],
+      "predicted_category": "general",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 3732.8818000023603,
+      "error": null
+    },
+    {
+      "id": "TC-16",
+      "expected_category": "general",
+      "tags": [
+        "clear"
+      ],
+      "predicted_category": "general",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 3683.758499999385,
+      "error": null
+    },
+    {
+      "id": "TC-17",
+      "expected_category": "billing",
+      "tags": [
+        "ambiguous",
+        "edge_case",
+        "multi_issue"
+      ],
+      "predicted_category": "billing",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 4616.256500001327,
+      "error": null
+    },
+    {
+      "id": "TC-18",
+      "expected_category": "account",
+      "tags": [
+        "edge_case",
+        "multi_issue"
+      ],
+      "predicted_category": "account",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 687.2197000011511,
+      "error": null
+    },
+    {
+      "id": "TC-19",
+      "expected_category": "technical",
+      "tags": [
+        "ambiguous",
+        "edge_case"
+      ],
+      "predicted_category": "technical",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 5651.132899998629,
+      "error": null
+    },
+    {
+      "id": "TC-20",
+      "expected_category": "billing",
+      "tags": [
+        "ambiguous",
+        "edge_case",
+        "multi_issue"
+      ],
+      "predicted_category": "billing",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 4104.965800001082,
+      "error": null
+    },
+    {
+      "id": "TC-21",
+      "expected_category": "billing",
+      "tags": [
+        "clear",
+        "short"
+      ],
+      "predicted_category": "billing",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 4422.51430000033,
+      "error": null
+    },
+    {
+      "id": "TC-22",
+      "expected_category": "billing",
+      "tags": [
+        "angry",
+        "messy"
+      ],
+      "predicted_category": "billing",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 234.15139999997336,
+      "error": null
+    },
+    {
+      "id": "TC-23",
+      "expected_category": "billing",
+      "tags": [
+        "messy",
+        "typos"
+      ],
+      "predicted_category": "billing",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 5538.956799999141,
+      "error": null
+    },
+    {
+      "id": "TC-24",
+      "expected_category": "billing",
+      "tags": [
+        "clear"
+      ],
+      "predicted_category": "billing",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 2529.538400001911,
+      "error": null
+    },
+    {
+      "id": "TC-25",
+      "expected_category": "billing",
+      "tags": [
+        "non_english"
+      ],
+      "predicted_category": "billing",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 4420.974700002262,
+      "error": null
+    },
+    {
+      "id": "TC-26",
+      "expected_category": "billing",
+      "tags": [
+        "clear"
+      ],
+      "predicted_category": "billing",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 288.20330000235117,
+      "error": null
+    },
+    {
+      "id": "TC-27",
+      "expected_category": "billing",
+      "tags": [
+        "ambiguous",
+        "vague"
+      ],
+      "predicted_category": "billing",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 5687.417400000413,
+      "error": null
+    },
+    {
+      "id": "TC-28",
+      "expected_category": "billing",
+      "tags": [
+        "clear"
+      ],
+      "predicted_category": "billing",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 4609.518299999763,
+      "error": null
+    },
+    {
+      "id": "TC-29",
+      "expected_category": "billing",
+      "tags": [
+        "clear"
+      ],
+      "predicted_category": "billing",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 4333.683299999393,
+      "error": null
+    },
+    {
+      "id": "TC-30",
+      "expected_category": "billing",
+      "tags": [
+        "ambiguous",
+        "messy",
+        "short",
+        "typos"
+      ],
+      "predicted_category": "account",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 2375.7800000021234,
+      "error": null
+    },
+    {
+      "id": "TC-31",
+      "expected_category": "billing",
+      "tags": [
+        "clear"
+      ],
+      "predicted_category": "billing",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 5628.40480000159,
+      "error": null
+    },
+    {
+      "id": "TC-32",
+      "expected_category": "billing",
+      "tags": [
+        "clear"
+      ],
+      "predicted_category": "billing",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 605.4493999981787,
+      "error": null
+    },
+    {
+      "id": "TC-33",
+      "expected_category": "billing",
+      "tags": [
+        "messy"
+      ],
+      "predicted_category": "billing",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 314.9166000002879,
+      "error": null
+    },
+    {
+      "id": "TC-34",
+      "expected_category": "billing",
+      "tags": [
+        "messy",
+        "short",
+        "typos"
+      ],
+      "predicted_category": "billing",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 4261.494200000016,
+      "error": null
+    },
+    {
+      "id": "TC-35",
+      "expected_category": "billing",
+      "tags": [
+        "clear"
+      ],
+      "predicted_category": "billing",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 5628.555100000085,
+      "error": null
+    },
+    {
+      "id": "TC-36",
+      "expected_category": "billing",
+      "tags": [
+        "edge_case",
+        "multi_issue"
+      ],
+      "predicted_category": "billing",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 226.98350000064238,
+      "error": null
+    },
+    {
+      "id": "TC-37",
+      "expected_category": "billing",
+      "tags": [
+        "ambiguous",
+        "edge_case"
+      ],
+      "predicted_category": "billing",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 1318.8292000013462,
+      "error": null
+    },
+    {
+      "id": "TC-38",
+      "expected_category": "billing",
+      "tags": [
+        "edge_case",
+        "multi_issue"
+      ],
+      "predicted_category": "billing",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 316.9019000015396,
+      "error": null
+    },
+    {
+      "id": "TC-39",
+      "expected_category": "billing",
+      "tags": [
+        "clear"
+      ],
+      "predicted_category": "billing",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 5658.599400001549,
+      "error": null
+    },
+    {
+      "id": "TC-40",
+      "expected_category": "billing",
+      "tags": [
+        "ambiguous",
+        "edge_case"
+      ],
+      "predicted_category": "billing",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 4280.374699999811,
+      "error": null
+    },
+    {
+      "id": "TC-41",
+      "expected_category": "billing",
+      "tags": [
+        "messy",
+        "typos"
+      ],
+      "predicted_category": "billing",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 1486.376899996685,
+      "error": null
+    },
+    {
+      "id": "TC-42",
+      "expected_category": "billing",
+      "tags": [
+        "clear"
+      ],
+      "predicted_category": "billing",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 4275.324599999294,
+      "error": null
+    },
+    {
+      "id": "TC-43",
+      "expected_category": "billing",
+      "tags": [
+        "non_english"
+      ],
+      "predicted_category": "billing",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 1107.0468999969307,
+      "error": null
+    },
+    {
+      "id": "TC-44",
+      "expected_category": "billing",
+      "tags": [
+        "edge_case",
+        "multi_issue"
+      ],
+      "predicted_category": "billing",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 339.51230000093346,
+      "error": null
+    },
+    {
+      "id": "TC-45",
+      "expected_category": "technical",
+      "tags": [
+        "ambiguous",
+        "short",
+        "vague"
+      ],
+      "predicted_category": "technical",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 1321.7646000011882,
+      "error": null
+    },
+    {
+      "id": "TC-46",
+      "expected_category": "technical",
+      "tags": [
+        "angry",
+        "messy"
+      ],
+      "predicted_category": "technical",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 4416.085299999395,
+      "error": null
+    },
+    {
+      "id": "TC-47",
+      "expected_category": "technical",
+      "tags": [
+        "non_english"
+      ],
+      "predicted_category": "technical",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 5455.8528999987175,
+      "error": null
+    },
+    {
+      "id": "TC-48",
+      "expected_category": "technical",
+      "tags": [
+        "non_english"
+      ],
+      "predicted_category": "technical",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 654.2239000009431,
+      "error": null
+    },
+    {
+      "id": "TC-49",
+      "expected_category": "technical",
+      "tags": [
+        "clear"
+      ],
+      "predicted_category": "technical",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 3367.774099999224,
+      "error": null
+    },
+    {
+      "id": "TC-50",
+      "expected_category": "technical",
+      "tags": [
+        "clear"
+      ],
+      "predicted_category": "technical",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 302.7050999990024,
+      "error": null
+    },
+    {
+      "id": "TC-51",
+      "expected_category": "technical",
+      "tags": [
+        "clear"
+      ],
+      "predicted_category": "technical",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 5586.302100000466,
+      "error": null
+    },
+    {
+      "id": "TC-52",
+      "expected_category": "technical",
+      "tags": [
+        "clear"
+      ],
+      "predicted_category": "technical",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 2749.104599999555,
+      "error": null
+    },
+    {
+      "id": "TC-53",
+      "expected_category": "technical",
+      "tags": [
+        "messy",
+        "vague"
+      ],
+      "predicted_category": "technical",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 629.2332999983046,
+      "error": null
+    },
+    {
+      "id": "TC-54",
+      "expected_category": "technical",
+      "tags": [
+        "clear"
+      ],
+      "predicted_category": "technical",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 387.0403999972041,
+      "error": null
+    },
+    {
+      "id": "TC-55",
+      "expected_category": "technical",
+      "tags": [
+        "clear"
+      ],
+      "predicted_category": "technical",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 1343.0287999981374,
+      "error": null
+    },
+    {
+      "id": "TC-56",
+      "expected_category": "technical",
+      "tags": [
+        "ambiguous",
+        "edge_case"
+      ],
+      "predicted_category": "technical",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 570.2225000022736,
+      "error": null
+    },
+    {
+      "id": "TC-57",
+      "expected_category": "technical",
+      "tags": [
+        "clear"
+      ],
+      "predicted_category": "technical",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 1490.5622000005678,
+      "error": null
+    },
+    {
+      "id": "TC-58",
+      "expected_category": "technical",
+      "tags": [
+        "clear"
+      ],
+      "predicted_category": "technical",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 409.8405000004277,
+      "error": null
+    },
+    {
+      "id": "TC-59",
+      "expected_category": "technical",
+      "tags": [
+        "ambiguous",
+        "edge_case",
+        "typos"
+      ],
+      "predicted_category": "technical",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 241.31439999837312,
+      "error": null
+    },
+    {
+      "id": "TC-60",
+      "expected_category": "technical",
+      "tags": [
+        "ambiguous",
+        "edge_case"
+      ],
+      "predicted_category": "technical",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 5519.45269999851,
+      "error": null
+    },
+    {
+      "id": "TC-61",
+      "expected_category": "technical",
+      "tags": [
+        "clear"
+      ],
+      "predicted_category": "technical",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 4333.76440000211,
+      "error": null
+    },
+    {
+      "id": "TC-62",
+      "expected_category": "technical",
+      "tags": [
+        "clear"
+      ],
+      "predicted_category": "technical",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 4289.901600001031,
+      "error": null
+    },
+    {
+      "id": "TC-63",
+      "expected_category": "technical",
+      "tags": [
+        "clear"
+      ],
+      "predicted_category": "technical",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 1346.3455000019167,
+      "error": null
+    },
+    {
+      "id": "TC-64",
+      "expected_category": "technical",
+      "tags": [
+        "angry",
+        "edge_case",
+        "multi_issue"
+      ],
+      "predicted_category": "technical",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 646.7763000000559,
+      "error": null
+    },
+    {
+      "id": "TC-65",
+      "expected_category": "technical",
+      "tags": [
+        "clear"
+      ],
+      "predicted_category": "technical",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 1507.6087000015832,
+      "error": null
+    },
+    {
+      "id": "TC-66",
+      "expected_category": "technical",
+      "tags": [
+        "clear"
+      ],
+      "predicted_category": "technical",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 4377.007799997955,
+      "error": null
+    },
+    {
+      "id": "TC-67",
+      "expected_category": "technical",
+      "tags": [
+        "edge_case",
+        "messy",
+        "multi_issue"
+      ],
+      "predicted_category": "technical",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 5632.0283000022755,
+      "error": null
+    },
+    {
+      "id": "TC-68",
+      "expected_category": "technical",
+      "tags": [
+        "clear"
+      ],
+      "predicted_category": "technical",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 464.58939999865834,
+      "error": null
+    },
+    {
+      "id": "TC-69",
+      "expected_category": "technical",
+      "tags": [
+        "clear"
+      ],
+      "predicted_category": "technical",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 257.30290000137757,
+      "error": null
+    },
+    {
+      "id": "TC-70",
+      "expected_category": "account",
+      "tags": [
+        "clear",
+        "short"
+      ],
+      "predicted_category": "account",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 5256.404800002201,
+      "error": null
+    },
+    {
+      "id": "TC-71",
+      "expected_category": "account",
+      "tags": [
+        "angry",
+        "messy"
+      ],
+      "predicted_category": "account",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 4790.655800003151,
+      "error": null
+    },
+    {
+      "id": "TC-72",
+      "expected_category": "account",
+      "tags": [
+        "non_english"
+      ],
+      "predicted_category": "account",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 370.7409999988158,
+      "error": null
+    },
+    {
+      "id": "TC-73",
+      "expected_category": "account",
+      "tags": [
+        "non_english"
+      ],
+      "predicted_category": "account",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 1296.6669000015827,
+      "error": null
+    },
+    {
+      "id": "TC-74",
+      "expected_category": "account",
+      "tags": [
+        "clear"
+      ],
+      "predicted_category": "account",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 540.3630000000703,
+      "error": null
+    },
+    {
+      "id": "TC-75",
+      "expected_category": "account",
+      "tags": [
+        "ambiguous",
+        "edge_case"
+      ],
+      "predicted_category": "account",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 5387.986800000363,
+      "error": null
+    },
+    {
+      "id": "TC-76",
+      "expected_category": "account",
+      "tags": [
+        "clear"
+      ],
+      "predicted_category": "account",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 214.1068000019004,
+      "error": null
+    },
+    {
+      "id": "TC-77",
+      "expected_category": "account",
+      "tags": [
+        "clear"
+      ],
+      "predicted_category": "account",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 1326.0932000011962,
+      "error": null
+    },
+    {
+      "id": "TC-78",
+      "expected_category": "account",
+      "tags": [
+        "clear",
+        "short"
+      ],
+      "predicted_category": "account",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 2351.3336000032723,
+      "error": null
+    },
+    {
+      "id": "TC-79",
+      "expected_category": "account",
+      "tags": [
+        "clear"
+      ],
+      "predicted_category": "account",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 5425.480599998991,
+      "error": null
+    },
+    {
+      "id": "TC-80",
+      "expected_category": "account",
+      "tags": [
+        "edge_case",
+        "multi_issue"
+      ],
+      "predicted_category": "account",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 1406.7304999989574,
+      "error": null
+    },
+    {
+      "id": "TC-81",
+      "expected_category": "account",
+      "tags": [
+        "messy",
+        "short",
+        "typos"
+      ],
+      "predicted_category": "account",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 196.2299000006169,
+      "error": null
+    },
+    {
+      "id": "TC-82",
+      "expected_category": "account",
+      "tags": [
+        "clear"
+      ],
+      "predicted_category": "account",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 5410.512500002369,
+      "error": null
+    },
+    {
+      "id": "TC-83",
+      "expected_category": "account",
+      "tags": [
+        "edge_case",
+        "multi_issue"
+      ],
+      "predicted_category": "account",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 461.8609999997716,
+      "error": null
+    },
+    {
+      "id": "TC-84",
+      "expected_category": "account",
+      "tags": [
+        "clear"
+      ],
+      "predicted_category": "account",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 1602.074200000061,
+      "error": null
+    },
+    {
+      "id": "TC-85",
+      "expected_category": "account",
+      "tags": [
+        "clear"
+      ],
+      "predicted_category": "account",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 466.19970000028843,
+      "error": null
+    },
+    {
+      "id": "TC-86",
+      "expected_category": "account",
+      "tags": [
+        "clear"
+      ],
+      "predicted_category": "account",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 4329.848599998513,
+      "error": null
+    },
+    {
+      "id": "TC-87",
+      "expected_category": "account",
+      "tags": [
+        "ambiguous",
+        "edge_case"
+      ],
+      "predicted_category": "account",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 1354.7266999994463,
+      "error": null
+    },
+    {
+      "id": "TC-88",
+      "expected_category": "account",
+      "tags": [
+        "clear"
+      ],
+      "predicted_category": "account",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 2412.9197000002023,
+      "error": null
+    },
+    {
+      "id": "TC-89",
+      "expected_category": "account",
+      "tags": [
+        "clear"
+      ],
+      "predicted_category": "account",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 5409.862700002122,
+      "error": null
+    },
+    {
+      "id": "TC-90",
+      "expected_category": "account",
+      "tags": [
+        "vague"
+      ],
+      "predicted_category": "account",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 941.9596000007004,
+      "error": null
+    },
+    {
+      "id": "TC-91",
+      "expected_category": "account",
+      "tags": [
+        "clear"
+      ],
+      "predicted_category": "account",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 215.48459999758052,
+      "error": null
+    },
+    {
+      "id": "TC-92",
+      "expected_category": "account",
+      "tags": [
+        "ambiguous",
+        "edge_case"
+      ],
+      "predicted_category": "account",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 284.0507000000798,
+      "error": null
+    },
+    {
+      "id": "TC-93",
+      "expected_category": "account",
+      "tags": [
+        "clear"
+      ],
+      "predicted_category": "account",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 1389.8650000010093,
+      "error": null
+    },
+    {
+      "id": "TC-94",
+      "expected_category": "account",
+      "tags": [
+        "clear"
+      ],
+      "predicted_category": "account",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 214.6628000009514,
+      "error": null
+    },
+    {
+      "id": "TC-95",
+      "expected_category": "general",
+      "tags": [
+        "ambiguous",
+        "short",
+        "vague"
+      ],
+      "predicted_category": "general",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 5412.979600001563,
+      "error": null
+    },
+    {
+      "id": "TC-96",
+      "expected_category": "general",
+      "tags": [
+        "clear"
+      ],
+      "predicted_category": "general",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 4307.969999998022,
+      "error": null
+    },
+    {
+      "id": "TC-97",
+      "expected_category": "general",
+      "tags": [
+        "clear"
+      ],
+      "predicted_category": "general",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 2157.319899997674,
+      "error": null
+    },
+    {
+      "id": "TC-98",
+      "expected_category": "general",
+      "tags": [
+        "clear"
+      ],
+      "predicted_category": "general",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 228.3114999991085,
+      "error": null
+    },
+    {
+      "id": "TC-99",
+      "expected_category": "general",
+      "tags": [
+        "off_topic"
+      ],
+      "predicted_category": "general",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 197.65560000087135,
+      "error": null
+    },
+    {
+      "id": "TC-100",
+      "expected_category": "general",
+      "tags": [
+        "off_topic"
+      ],
+      "predicted_category": "general",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 227.4141999987478,
+      "error": null
+    },
+    {
+      "id": "TC-101",
+      "expected_category": "general",
+      "tags": [
+        "off_topic"
+      ],
+      "predicted_category": "general",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 5435.542999999598,
+      "error": null
+    },
+    {
+      "id": "TC-102",
+      "expected_category": "general",
+      "tags": [
+        "off_topic"
+      ],
+      "predicted_category": "general",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 1424.1423000021314,
+      "error": null
+    },
+    {
+      "id": "TC-103",
+      "expected_category": "general",
+      "tags": [
+        "clear"
+      ],
+      "predicted_category": "general",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 2306.4123000003747,
+      "error": null
+    },
+    {
+      "id": "TC-104",
+      "expected_category": "general",
+      "tags": [
+        "non_english"
+      ],
+      "predicted_category": "general",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 2776.2543999997433,
+      "error": null
+    },
+    {
+      "id": "TC-105",
+      "expected_category": "general",
+      "tags": [
+        "ambiguous",
+        "edge_case"
+      ],
+      "predicted_category": "general",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 2741.2389000019175,
+      "error": null
+    },
+    {
+      "id": "TC-106",
+      "expected_category": "general",
+      "tags": [
+        "clear"
+      ],
+      "predicted_category": "general",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 2308.4452000002784,
+      "error": null
+    },
+    {
+      "id": "TC-107",
+      "expected_category": "general",
+      "tags": [
+        "clear"
+      ],
+      "predicted_category": "general",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 2339.177899997594,
+      "error": null
+    },
+    {
+      "id": "TC-108",
+      "expected_category": "general",
+      "tags": [
+        "clear"
+      ],
+      "predicted_category": "general",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 2344.230200000311,
+      "error": null
+    },
+    {
+      "id": "TC-109",
+      "expected_category": "general",
+      "tags": [
+        "clear"
+      ],
+      "predicted_category": "general",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 2358.0834999993385,
+      "error": null
+    },
+    {
+      "id": "TC-110",
+      "expected_category": "general",
+      "tags": [
+        "clear"
+      ],
+      "predicted_category": "general",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 2331.2378999980865,
+      "error": null
+    },
+    {
+      "id": "TC-111",
+      "expected_category": "general",
+      "tags": [
+        "messy",
+        "short",
+        "vague"
+      ],
+      "predicted_category": "general",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 2343.2969999994384,
+      "error": null
+    },
+    {
+      "id": "TC-112",
+      "expected_category": "general",
+      "tags": [
+        "clear"
+      ],
+      "predicted_category": "general",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 3338.4838000019954,
+      "error": null
+    },
+    {
+      "id": "TC-113",
+      "expected_category": "general",
+      "tags": [
+        "clear"
+      ],
+      "predicted_category": "general",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 4680.466599998908,
+      "error": null
+    },
+    {
+      "id": "TC-114",
+      "expected_category": "general",
+      "tags": [
+        "clear"
+      ],
+      "predicted_category": "general",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 4266.826099999889,
+      "error": null
+    },
+    {
+      "id": "TC-115",
+      "expected_category": "general",
+      "tags": [
+        "clear"
+      ],
+      "predicted_category": "general",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 1324.561100002029,
+      "error": null
+    },
+    {
+      "id": "TC-116",
+      "expected_category": "general",
+      "tags": [
+        "clear"
+      ],
+      "predicted_category": "general",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 4597.743599999376,
+      "error": null
+    },
+    {
+      "id": "TC-117",
+      "expected_category": "general",
+      "tags": [
+        "ambiguous",
+        "edge_case"
+      ],
+      "predicted_category": "billing",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 1508.4424000015133,
+      "error": null
+    },
+    {
+      "id": "TC-118",
+      "expected_category": "general",
+      "tags": [
+        "clear"
+      ],
+      "predicted_category": "general",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 4349.019299999782,
+      "error": null
+    },
+    {
+      "id": "TC-119",
+      "expected_category": "general",
+      "tags": [
+        "ambiguous",
+        "edge_case"
+      ],
+      "predicted_category": "billing",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 5372.185500000342,
+      "error": null
+    },
+    {
+      "id": "TC-120",
+      "expected_category": "general",
+      "tags": [
+        "clear"
+      ],
+      "predicted_category": "general",
+      "valid_output": true,
+      "raw_output": null,
+      "latency_ms": 4293.573700000707,
+      "error": null
+    }
+  ]
+}

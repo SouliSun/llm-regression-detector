@@ -8,6 +8,7 @@ class InvalidModelOutput(Exception):
     def __init__(self, raw_json: str, reason: str) -> None:
         super().__init__(f"Invalid model output: {reason}")
         self.raw_json = raw_json
+        self.raw_output = raw_json
         self.reason = reason
  
 

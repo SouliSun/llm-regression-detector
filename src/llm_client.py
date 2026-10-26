@@ -1,8 +1,8 @@
-from openai import OpenAI, APIConnectionError, APITimeoutError, RateLimitError
+from openai import OpenAI, APIConnectionError, APITimeoutError, RateLimitError, BadRequestError
 from dotenv import load_dotenv
 import os
 import time
-from typing import Dict, List, Optional, Protocol
+from typing import Optional, Protocol
 from pydantic import BaseModel, Field
 
 from schema import ClassificationResult, PromptConfig
@@ -23,7 +23,7 @@ class OpenAIClient():
             api_key=self.api_key,
             base_url="https://api.groq.com/openai/v1",
             timeout=30.0
-            )
+        )
         
     def complete(self, system: str, messages: list[dict], model: str, temperature: float) -> str:
         delays = [1, 2, 4]
@@ -45,7 +45,17 @@ class OpenAIClient():
                 if attempt == 3:
                     raise  
                 time.sleep(delays[attempt])
-
+            except BadRequestError as e:
+                err_msg = str(e)
+                if "json_validate_failed" in err_msg:
+                    body = getattr(e, "body", None)
+                    if isinstance(body, dict):
+                        if "failed_generation" in body:
+                            return str(body["failed_generation"])
+                        if isinstance(body.get("error"), dict) and "failed_generation" in body["error"]:
+                            return str(body["error"]["failed_generation"])
+                    return "REFUSAL: Model refused or failed to generate valid JSON"
+                raise
 
 if __name__ == "__main__":
     client = OpenAIClient()
@@ -58,4 +68,3 @@ if __name__ == "__main__":
 
     print("Real API Output:")
     print(response)
-

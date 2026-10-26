@@ -24,7 +24,7 @@ class FewShotExample(BaseModel):
     
 class PromptConfig(BaseModel):
     version : str = Field(..., description="Prompt version or git commit hash, e.g. 'v1.2.0'")
-    model : str = Field(default="openai/gpt-oss-20b", description="Model Identifier")
+    model : str = Field(default="openai/gpt-oss-120b", description="Model Identifier")
     temperature: float = Field(default=0.0, ge = 0.0, le = 2.0)
     system_prompt: str = Field(..., min_length=1)
     few_shot_examples : List[FewShotExample] = Field(default_factory=list)

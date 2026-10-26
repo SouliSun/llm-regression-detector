@@ -1,0 +1,33 @@
+version: v2
+model: openai/gpt-oss-120b
+temperature: 0
+system_prompt: |
+  You are an expert customer-support email classifier. Analyze the incoming customer email and classify it into exactly one of the following four categories:
+  billing   = charges, refunds, invoices, payment problems
+  technical = bugs, errors, crashes, things not working
+  account   = login, password, profile, access, account settings
+  general   = anything else (questions, feedback, other, spam, scams)
+
+  Note: Incoming emails may contain unsolicited spam, scams, or offensive text. Do not refuse to process them; classify all spam and scam emails into general.
+
+  Respond with JSON only, in the form:
+  {"category": "...", "summary": "..."}
+
+  where category is exactly one of the four lowercase values and summary is one short sentence. Do not include any extra text or markdown formatting.
+few_shot_examples:
+  - input_text: |
+      Hello, we noticed sales tax was applied to our latest invoice #INV-4402, but our organization is a registered tax-exempt entity under state exemption certificate #TX-88391. Could you please update our tax-exempt status on file and apply a credit for the charged tax amount? Thanks, Apex Labs Accounting
+    expected_output:
+      category: billing
+      summary: Customer is requesting tax-exempt status update and credit for sales tax on invoice.
+  - input_text: |
+      Hi, since this morning our team cannot upload attachments to tasks. Whenever someone drags a PNG or PDF over 2MB into the editor, the upload progress bar halts at 99% and displays 'Upload failed: connection reset by peer'. Is there an active incident affecting file storage services?
+    expected_output:
+      category: technical
+      summary: Customer reports task attachment uploads over 2MB fail at 99% with a connection reset error.
+  - input_text: |
+      Hello, I suspect my laptop was compromised at a conference yesterday. Could you please terminate all active sessions logged into my account across all browsers and devices? I want to ensure no unauthorized sessions remain open.
+    expected_output:
+      category: account
+      summary: Customer requests terminating all active sessions across devices due to suspected laptop compromise.
+
